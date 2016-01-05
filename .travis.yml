@@ -9,6 +9,7 @@ addons:
   apt:
     packages:
     - wine
+    - nsis
 deploy:
   provider: releases
   api_key:
