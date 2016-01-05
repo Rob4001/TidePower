@@ -1,0 +1,7 @@
+if $TRAVIS_OS_NAME == "linux"
+then
+npm run build:lin
+npm run build:win
+else
+npm run build:osx
+fi

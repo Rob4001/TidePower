@@ -1,10 +1,11 @@
+os:
+  - linux
+  - osx
 language: node_js
 node_js:
 - '0.11'
 - '0.10'
-script: 
-  - npm run build:win
-  - npm run build:lin
+script: ci/build
 addons:
   apt:
     packages:
