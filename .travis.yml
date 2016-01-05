@@ -2,7 +2,13 @@ language: node_js
 node_js:
 - '0.11'
 - '0.10'
-script: npm run build
+script: 
+  - npm run build:win
+  - npm run build:lin
+addons:
+  apt:
+    packages:
+    - wine
 deploy:
   provider: releases
   api_key:
