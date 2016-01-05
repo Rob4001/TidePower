@@ -9,10 +9,13 @@
     "clean:lin": "rm -rf ./dist/lin",
     "clean:osx": "rm -rf ./dist/osx",
     "clean:win": "rm -rf ./dist/win",
-    "build": "npm run clean && npm run build:osx && npm run build:win && npm run build:lin",
-    "build:lin": "npm run clean:lin && electron-packager ./ \"TidePower\" --out=dist/lin --platform=linux --arch=x64 --version=0.35.2 --ignore=\"node_modules/(electron-packager|electron-prebuilt)\" --ignore=dist",
-    "build:osx": "npm run clean:osx && electron-packager ./ \"TidePower\" --out=dist/osx --platform=darwin --arch=x64 --version=0.35.2 --icon=assets/osx/tide.icns --ignore=\"node_modules/(electron-packager|electron-prebuilt)\" --ignore=dist",
-    "build:win": "npm run clean:win && electron-packager ./ \"TidePower\" --out=dist/win --platform=win32 --arch=ia32 --version=0.35.2 --icon=assets/win/icon.ico --ignore=\"node_modules/(electron-packager|electron-prebuilt)\" --ignore=dist"
+    "pack": "npm run clean && npm run build:osx && npm run build:win && npm run build:lin",
+    "pack:lin": "npm run clean:lin && electron-packager ./ \"TidePower\" --out=dist/lin --platform=linux --arch=x64 --version=0.35.2 --ignore=\"node_modules/(electron-packager|electron-prebuilt)\" --ignore=dist",
+    "pack:osx": "npm run clean:osx && electron-packager ./ \"TidePower\" --out=dist/osx --platform=darwin --arch=x64 --version=0.35.2 --icon=assets/osx/tide.icns --ignore=\"node_modules/(electron-packager|electron-prebuilt)\" --ignore=dist",
+    "pack:win": "npm run clean:win && electron-packager ./ \"TidePower\" --out=dist/win --platform=win32 --arch=ia32 --version=0.35.2 --icon=assets/win/icon.ico --ignore=\"node_modules/(electron-packager|electron-prebuilt)\" --ignore=dist",
+    "build:win": "npm run pack:win && electron-builder \"dist/win/TidePower-win32-ia32\" --platform=win --out=\"dist/win\" --config=builder.json",
+    "build:lin": "npm run pack:lin && tar -zcf dist/lin/TidePower-linux-x64.tar.gz -C dist/lin/ TidePower-linux-x64"
+
   },
   "repository": {
     "type": "git",
