@@ -1,7 +1,7 @@
-if $TRAVIS_OS_NAME == "linux"
+if [ "$TRAVIS_OS_NAME" == "osx" ]
 then
+npm run build:osx
+else
 npm run build:lin
 npm run build:win
-else
-npm run build:osx
 fi
