@@ -1,10 +1,20 @@
-os:
-  - linux
-  - osx
 language: generic
-node_js:
-- '0.11'
-before_install: ci/setup
+matrix:
+  include:
+    - os: linux
+      env: NODE_VERSION=0.12
+    - os: linux
+      env: NODE_VERSION=4
+    - os: osx
+      env: ATOM_SPECS_TASK=core NODE_VERSION=0.12
+    - os: osx
+      env: ATOM_SPECS_TASK=packages NODE_VERSION=0.12
+compiler: clang
+install:
+  - git clone https://github.com/creationix/nvm.git /tmp/.nvm
+  - source /tmp/.nvm/nvm.sh
+  - nvm install $NODE_VERSION
+  - nvm use $NODE_VERSION
 script: ci/build
 addons:
   apt:
