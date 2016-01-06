@@ -15,8 +15,7 @@
     "pack:win": "npm run clean:win && electron-packager ./ \"TidePower\" --out=dist/win --platform=win32 --arch=ia32 --version=0.35.2 --icon=assets/win/icon.ico --ignore=\"node_modules/(electron-packager|electron-prebuilt)\" --ignore=dist",
     "build:win": "npm run pack:win && electron-builder \"dist/win/TidePower-win32-ia32\" --platform=win --out=\"dist/win\" --config=builder.json",
     "build:lin": "npm run pack:lin && tar -zcf dist/lin/TidePower-linux-x64.tar.gz -C dist/lin/ TidePower-linux-x64",
-    "build:osx": "npm run build:osx && electron-builder \"dist/osx/TidePower-darwin-x64\" --platform=osx --out=\"dist/osx\" --config=builder.json",
-
+    "build:osx": "npm run build:osx && electron-builder \"dist/osx/TidePower-darwin-x64\" --platform=osx --out=\"dist/osx\" --config=builder.json"
   },
   "repository": {
     "type": "git",
