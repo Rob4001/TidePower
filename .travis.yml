@@ -27,8 +27,8 @@ deploy:
   api_key:
     secure: ZhrY+EID9odERSR4S9Tavau3SG5QiG043MztwAglk9BN4rBMhPmv7la0FPF7V1SuTXd7fzN1ur9NtGqGpbR+4Ox4ZvHGFLXFpoWdfW2eDcjaXG3uMCm3mdlDQgDMReZLbWQWCOYBukHAnoEeD+3aTqhQWSmjzI6HlveWkRDpuVD4uWcU6fpVhwtyS5w+CYTLLFSFR1qX6TvJNScDb+75d1PR5odDWhz+wLHWPCaa1l2QGKhSEwKLaGLPIp4dD2SFvINWcymFSQLvO0N/CxNNz+ha6v8vYIixw6o3eyHDV0Fw6pHLIB6j/uwANustZyy8JLOqUvCPOiNnE9OAHsaGvmN6EYu5oJ4niDsm9XZY0+sOx3pqyacTjL5tI20+3UJzGzZDb1gdcVOrdyRwCppcgjoutl6yUVFOc+ESvwWvPeb8ZZyx0dSSJcmoWxeNqRo+fXWBlWo2epprF14SEeuGCbiGXKGQO30JrUDD9kelHvAmMsARxzJaIp8I4BejEM+EyzJTmLluB3jg1nK8S+ipdQ+ymzLq9d9nhpLshngUUwmSJeTh1MQRrBdGv84qi8tmxFOntLoYU8OpStf8RUmDeKooPmAbx//onubtnMuxOQPdEvXwf+OWktELew/4tSMANjXCK0sWCgXp4uyBLMapOyF0KD9I1tGgwRXJOQswJwo=
   file: 
-    - "${TRAVIS_BUILD_DIR}/dists/win/TidePower Setup.exe"
-    - ${TRAVIS_BUILD_DIR}/dists/lin/TidePower-linux-x64.tar.gz
+    - "${TRAVIS_BUILD_DIR}/dist/win/TidePower Setup.exe"
+    - ${TRAVIS_BUILD_DIR}/dist/lin/TidePower-linux-x64.tar.gz
   on:
     repo: Rob4001/TidePower
     tags: true
