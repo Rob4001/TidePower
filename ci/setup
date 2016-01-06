@@ -1,4 +1,8 @@
 git clone --depth 1 https://github.com/creationix/nvm.git ~/.nvm
 source ~/.nvm/nvm.sh
 nvm install 0.11
+npm install -g npm@~2
 npm install
+node --version
+npm --version
+nvm --version
