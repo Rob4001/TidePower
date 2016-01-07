@@ -6,7 +6,7 @@ matrix:
     - os: linux
       env: NODE_VERSION=0.12 OS_BUILD=win ARTIFACT="TidePower Setup.exe"
     - os: osx
-      env: NODE_VERSION=0.12 OS_BUILD=osx ARTIFACT="TidePower-darwin-x64.dmg"
+      env: NODE_VERSION=0.12 OS_BUILD=osx ARTIFACT="TidePower.dmg"
 compiler: clang
 install:
   - git clone https://github.com/creationix/nvm.git /tmp/.nvm
