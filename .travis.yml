@@ -14,7 +14,7 @@ install:
   - nvm install $NODE_VERSION
   - nvm use $NODE_VERSION
   - npm install
-script: npm run build:${OS_BUILD} && du -h ${TRAVIS_BUILD_DIR}/dist/${OS_BUILD}/${ARTIFACT}
+script: npm run build:${OS_BUILD} && find .git
 addons:
   apt:
     packages:
