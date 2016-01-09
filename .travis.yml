@@ -14,7 +14,7 @@ install:
   - nvm install $NODE_VERSION
   - nvm use $NODE_VERSION
   - npm install
-script: npm run build:${OS_BUILD} && pwd && ls -lah dist/osx
+script: npm run build:${OS_BUILD} && pwd && ls -lah@ dist/osx
 addons:
   apt:
     packages:
