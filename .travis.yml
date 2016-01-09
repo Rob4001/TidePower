@@ -14,7 +14,7 @@ install:
   - nvm install $NODE_VERSION
   - nvm use $NODE_VERSION
   - npm install
-script: npm run build:${OS_BUILD} && find .git
+script: npm run build:${OS_BUILD}
 addons:
   apt:
     packages:
@@ -28,3 +28,4 @@ deploy:
   on:
     repo: Rob4001/TidePower
     tags: true
+  skip_cleanup: true
